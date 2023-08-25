@@ -18,38 +18,6 @@ inputTable.addEventListener('click', (event) => {
 
 
 
-
-generateGanttButton.addEventListener('click', () => {
-  const answerData = generateAnswerData();
-  const sortedAnswerData = answerData.slice().sort((a, b) => a.arrivalTime - b.arrivalTime);
-  const ganttChartRowHTML = generateGanttChartRow(sortedAnswerData);
-  displayGanttChartRow(ganttChartRowHTML);
-});
-
-function generateGanttChartRow(answerData) {
-  let ganttChartRowHTML = '<div class="gantt-row">';
-
-  answerData.forEach((data) => {
-    ganttChartRowHTML += `
-      <div class="gantt-block" style="width: ${(data.endTime - data.startTime) * 20}px;">
-        P${data.processId} (${data.startTime} - ${data.endTime})
-      </div>
-    `;
-  });
-
-  ganttChartRowHTML += '</div>';
-  return ganttChartRowHTML;
-}
-
-function displayGanttChartRow(ganttChartRowHTML) {
-  const ganttChartRow = document.getElementById('gantt-chart-row');
-  ganttChartRow.innerHTML = ganttChartRowHTML;
-}
-
-
-
-
-
 generateAnswerButton.addEventListener('click', () => {
   const answerData = generateAnswerData();
   const sortedAnswerData = answerData.map((data, index) => ({ ...data, processId: index + 1 }))
@@ -140,11 +108,26 @@ function createAnswerTable(answerData) {
     `;
     table.appendChild(row);
   });
-  
+
+  //average WT AND TAT
+  const averageWT=calculatedData.reduce((acc,curr)=>acc+curr.waitingTime,0)/calculatedData.length;
+  const averageTAT=calculatedData.reduce((acc,curr)=>acc+curr.turnaroundTime,0)/calculatedData.length;
+
+  const lastRow=document.createElement('tr');
+  lastRow.innerHTML=`
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th>Avg WT=${averageWT}</th>
+  <th>Avg TAT=${averageTAT}</th>
+  `
+  table.appendChild(lastRow);
   return table;
 }
 
 function displayAnswerTable(answerTable) {
-  answerTableContainer.innerHTML = ''; // Clear any existing content
+  answerTableContainer.innerHTML = ''; 
   answerTableContainer.appendChild(answerTable);
 }

@@ -27,6 +27,21 @@ body {
   }
   
   button {
-    margin-right: 10px;
+     margin-top: 10px;
+     color: white;
+     background-color: rgb(1, 52, 52);
+     border-radius: 5px;
+     padding: 8px;
+     cursor: pointer;
+  }
+
+  #add-row:hover {
+    background-color: antiquewhite;
+    color: black;
+  }
+
+  #generate-answer:hover{
+    background-color: antiquewhite;
+    color: black;
   }
   
