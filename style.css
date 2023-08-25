@@ -45,3 +45,7 @@ body {
     color: black;
   }
   
+  .delete-row:hover {
+    background-color: rgb(243, 75, 75);
+    color: black;
+  }
