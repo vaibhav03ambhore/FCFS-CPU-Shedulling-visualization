@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gantt Chart Generator</h1>
+    <form id="input-form">
+        <table>
+        <thead>
+            <tr>
+            <th>Process</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+            </tr>
+        </thead>
+        <tbody id="input-table">
+        </tbody>
+        </table>
+        <button type="button" id="add-row">Add Row</button>
+        <button type="button" id="generate-gantt">Generate Gantt Chart</button>
+        <button type="button" id="generate-answer">Generate Answer</button>
+
+        <div class="answer-table"></div>
+        <div id="gantt-chart-row"></div>
+    </form>
+    <div id="gantt-chart"></div>
+    <div id="answer-table"></div>
+    <script src="script.js"></script>
+</body>
+</html>
