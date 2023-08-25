@@ -17,7 +17,7 @@ This project implements the First-Come-First-Serve (FCFS) scheduling algorithm c
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/fcfs-algorithm-os.git
+   git clone https://github.com/vaibhav03ambhore/fcfs-algorithm-os.git
    cd fcfs-algorithm-os
 
  2.Open index.html in your web browser.
