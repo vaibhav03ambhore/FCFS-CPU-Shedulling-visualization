@@ -1,8 +1,6 @@
 const inputTable = document.getElementById('input-table');
 const addRowButton = document.getElementById('add-row');
-const generateGanttButton = document.getElementById('generate-gantt');
 const generateAnswerButton = document.getElementById('generate-answer');
-const ganttChart = document.getElementById('gantt-chart');
 const answerTableContainer = document.getElementById('answer-table');
 
 addRowButton.addEventListener('click', () => {
@@ -81,9 +79,12 @@ function createAnswerTable(answerData) {
   const sortedAnswerData = answerData.slice().sort((a, b) => a.arrivalTime - b.arrivalTime);
 
   const table = document.createElement('table');
-  
+  table.className="ans-table";
+  //answerTableContainer.appendChild(table);
   const headerRow = document.createElement('tr');
+  headerRow.className="ans-header-row";
   headerRow.innerHTML = `
+    
     <th>Process</th>
     <th>Arrival Time</th>
     <th>Burst Time</th>
@@ -96,7 +97,10 @@ function createAnswerTable(answerData) {
 
   sortedAnswerData.forEach((data) => {
     const correspondingCalculatedData = calculatedData.find(calcData => calcData.processId === data.processId);
-    const row = document.createElement('tr');
+    const tableBody = document.createElement('tbody');
+    tableBody.className="ans-table-body";
+    table.appendChild(tableBody);
+    const row=document.createElement('tr');
     row.innerHTML = `
       <td>P${data.processId}</td>
       <td>${data.arrivalTime}</td>
@@ -106,7 +110,7 @@ function createAnswerTable(answerData) {
       <td>${correspondingCalculatedData.waitingTime}</td>
       <td>${correspondingCalculatedData.turnaroundTime}</td>
     `;
-    table.appendChild(row);
+    tableBody.appendChild(row);
   });
 
   //average WT AND TAT
@@ -114,6 +118,7 @@ function createAnswerTable(answerData) {
   const averageTAT=calculatedData.reduce((acc,curr)=>acc+curr.turnaroundTime,0)/calculatedData.length;
 
   const lastRow=document.createElement('tr');
+  lastRow.className="ans-table-last-row";
   lastRow.innerHTML=`
   <th></th>
   <th></th>
@@ -131,3 +136,5 @@ function displayAnswerTable(answerTable) {
   answerTableContainer.innerHTML = ''; 
   answerTableContainer.appendChild(answerTable);
 }
+
+
