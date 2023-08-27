@@ -2,6 +2,8 @@ const inputTable = document.getElementById('input-table');
 const addRowButton = document.getElementById('add-row');
 const generateAnswerButton = document.getElementById('generate-answer');
 const answerTableContainer = document.getElementById('answer-table');
+const container=document.getElementById('container');
+
 
 addRowButton.addEventListener('click', () => {
   const newRow = createRow();
@@ -15,8 +17,16 @@ inputTable.addEventListener('click', (event) => {
 });
 
 
-
+let paragraphDisplayed = false;
 generateAnswerButton.addEventListener('click', () => {
+  
+  if(!paragraphDisplayed){
+    displayPara();
+    paragraphDisplayed=true;
+  }
+  
+
+
   const answerData = generateAnswerData();
   const sortedAnswerData = answerData.map((data, index) => ({ ...data, processId: index + 1 }))
                                       .slice().sort((a, b) => a.arrivalTime - b.arrivalTime);
@@ -24,6 +34,21 @@ generateAnswerButton.addEventListener('click', () => {
   displayAnswerTable(answerTable);
 });
 
+function displayPara(){
+  const para=document.createElement('div');
+    para.className="para";
+    para.innerHTML=`
+      <p><strong>AT</strong> = Arival Time</p>
+      <p><strong>BT</strong> = Burst Time</p>
+      <p><strong>ST</strong> = Start Time</p>
+      <p><strong>ET</strong> = End Time</p>
+      <p><strong>WT</strong> = Waiting Time</p>
+      <p><strong>TAT</strong> = Turn Around Time</p>
+      <p><strong>AWT</strong> = Average Waiting Time</p>
+      <p><strong>ATAT</strong> = Average Turn Around Time</p>
+    `
+    container.appendChild(para);
+}
 function createRow() {
   const newRow = document.createElement('tr');
   newRow.innerHTML = `

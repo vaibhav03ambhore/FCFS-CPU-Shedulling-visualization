@@ -23,26 +23,16 @@
   }
   
   #input-form {
-    margin-top: 50px;
-    width: 100%;
+    margin: 50px 30px 20px;
+    width: auto;
+  
   }
   
   .first-table{
-    background-color: red;
+    
     width: 100%;
   }
-  #input-table tr .arrival-time, #input-table tr .burst-time{
-    padding: 5px;
-    width: 70px;
-  }
-
-  #answer-table{
-    margin-top: 25px;
-    width: auto;
-    background-color: red;
-    padding-right: 155px;
-  }
- 
+  
 
   table, th, td {
     
@@ -71,9 +61,6 @@
   } 
 
 
-
-
-  /* Shared Button Styles */
 .button {
   margin-top: 10px;
   border-radius: 5px;
@@ -101,20 +88,47 @@
   background-color: bisque;
 }
 
-.bg-light-green {
-  background-color: rgb(197, 235, 116);
+.ans-last-row{
+  background-color: rgb(231, 241, 90);
 }
 
-/* Table Styling */
+#answer-table{
+  margin-top: 25px;
+  width: auto;
+  /* background-color: red; */
+}
+
 .ans-table th,
 .ans-table td {
   padding: 8px;
   text-align: center;
   border: 1px solid black;
+
 }
 
+table tbody tr .ans-p,table tbody tr .ans-at, table tbody tr .ans-bt,table tbody tr .ans-st, table tbody tr .ans-et, table tbody tr .ans-wt, table tbody tr .ans-tat{
+  width: 100px;
+}
 
+.para{
+  width: 70%;
+}
+.read-more{
+  margin-top: 13px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
 
- 
+@media (max-width: 530px) {
+
+  #input-table tr .arrival-time, #input-table tr .burst-time{
+    padding: 5px;
+    width: 50px;
+  }
+
+  table tbody tr .ans-p,table tbody tr .ans-at, table tbody tr .ans-bt,table tbody tr .ans-st, table tbody tr .ans-et, table tbody tr .ans-wt, table tbody tr .ans-tat{
+    width: auto;
+  }
+}
 
 
