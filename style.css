@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 15px;
+    padding: 10px;
+    font-size: 15px;
   }
 
   .container{
@@ -34,7 +35,7 @@ body {
   }
   #answer-table{
     margin-top: 25px;
-    width: 100%;
+    width: auto;
   }
   .ans-table{
    width: 100%;
@@ -50,7 +51,9 @@ body {
   }
 
   table, th, td {
+    width: auto;
     border: 1px solid black;
+    border-collapse: collapse;
   }
   
   th, td {
