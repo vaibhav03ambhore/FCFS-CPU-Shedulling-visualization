@@ -13,17 +13,20 @@
         <h1><span class="icon">🔄</span> FCFS - First Come First Serve</h1>
         <h3>( <a href="https://www.geeksforgeeks.org/preemptive-and-non-preemptive-scheduling/" target="_blank">Non-Preemptive</a> Sheduling Algorithm )</h3>
         <form id="input-form">
-            <table class=" bg-aqua">
-                <thead>
-                    <tr>
-                        <th>Process</th>
-                        <th>Arrival Time</th>
-                        <th>Burst Time</th>
-                    </tr>
-                </thead>
-                <tbody id="input-table" class="bg-bisque">
-                </tbody>
-            </table>
+            <div class="first-table">
+                <table >
+                    <thead class=" bg-aqua">
+                        <tr>
+                            <th>Process</th>
+                            <th>Arrival Time</th>
+                            <th>Burst Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="input-table" class="bg-bisque">
+                    </tbody>
+                </table>
+
+            </div>
             <button type="button" class="button button-primary" id="add-row">Add Row</button>
             <br>
             <button type="button" class="button button-primary" id="generate-answer">Generate Answer</button>

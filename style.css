@@ -27,16 +27,25 @@
     width: 100%;
   }
   
+  .first-table{
+    background-color: red;
+    width: 100%;
+  }
+  #input-table tr .arrival-time, #input-table tr .burst-time{
+    padding: 5px;
+    width: 70px;
+  }
 
   #answer-table{
     margin-top: 25px;
     width: auto;
     background-color: red;
+    padding-right: 155px;
   }
  
 
   table, th, td {
-    width: auto;
+    
     border: 1px solid black;
     border-collapse: collapse;
   }
@@ -45,7 +54,6 @@
     padding: 5px;
     text-align: center;
   }
-
 
   .delete-row{
     background-color: rgb(255, 0, 0);

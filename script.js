@@ -79,19 +79,18 @@ function createAnswerTable(answerData) {
   const sortedAnswerData = answerData.slice().sort((a, b) => a.arrivalTime - b.arrivalTime);
 
   const table = document.createElement('table');
-  // table.className="ans-table";
-  //answerTableContainer.appendChild(table);
+
   const headerRow = document.createElement('tr');
   headerRow.className="bg-aqua";
   headerRow.innerHTML = `
     
-    <th>Process</th>
-    <th>Arrival Time</th>
-    <th>Burst Time</th>
-    <th>Start Time</th>
-    <th>End Time</th>
-    <th>Waiting Time</th>
-    <th>Turnaround Time</th>
+    <th>P</th>
+    <th>AT</th>
+    <th>BT</th>
+    <th>ST</th>
+    <th>ET</th>
+    <th>WT</th>
+    <th>TAT</th>
   `;
   table.appendChild(headerRow);
 
@@ -102,13 +101,13 @@ function createAnswerTable(answerData) {
     table.appendChild(tableBody);
     const row=document.createElement('tr');
     row.innerHTML = `
-      <td>P${data.processId}</td>
-      <td>${data.arrivalTime}</td>
-      <td>${data.burstTime}</td>
-      <td>${correspondingCalculatedData.startTime}</td>
-      <td>${correspondingCalculatedData.endTime}</td>
-      <td>${correspondingCalculatedData.waitingTime}</td>
-      <td>${correspondingCalculatedData.turnaroundTime}</td>
+      <td class="ans-p">P${data.processId}</td>
+      <td class="ans-at">${data.arrivalTime}</td>
+      <td class="ans-bt">${data.burstTime}</td>
+      <td class="ans-st">${correspondingCalculatedData.startTime}</td>
+      <td class="ans-et">${correspondingCalculatedData.endTime}</td>
+      <td class="ans-wt">${correspondingCalculatedData.waitingTime}</td>
+      <td class="ans-tat">${correspondingCalculatedData.turnaroundTime}</td>
     `;
     tableBody.appendChild(row);
   });
@@ -118,15 +117,15 @@ function createAnswerTable(answerData) {
   const averageTAT=calculatedData.reduce((acc,curr)=>acc+curr.turnaroundTime,0)/calculatedData.length;
 
   const lastRow=document.createElement('tr');
-  lastRow.className="ans-table-last-row";
+  lastRow.className="ans-last-row";
   lastRow.innerHTML=`
   <th></th>
   <th></th>
   <th></th>
   <th></th>
   <th></th>
-  <th>Avg WT=${averageWT}</th>
-  <th>Avg TAT=${averageTAT}</th>
+  <th>AWT =${averageWT}</th>
+  <th>ATAT =${averageTAT}</th>
   `
   table.appendChild(lastRow);
   return table;
