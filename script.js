@@ -79,10 +79,10 @@ function createAnswerTable(answerData) {
   const sortedAnswerData = answerData.slice().sort((a, b) => a.arrivalTime - b.arrivalTime);
 
   const table = document.createElement('table');
-  table.className="ans-table";
+  // table.className="ans-table";
   //answerTableContainer.appendChild(table);
   const headerRow = document.createElement('tr');
-  headerRow.className="ans-header-row";
+  headerRow.className="bg-aqua";
   headerRow.innerHTML = `
     
     <th>Process</th>
@@ -98,7 +98,7 @@ function createAnswerTable(answerData) {
   sortedAnswerData.forEach((data) => {
     const correspondingCalculatedData = calculatedData.find(calcData => calcData.processId === data.processId);
     const tableBody = document.createElement('tbody');
-    tableBody.className="ans-table-body";
+    tableBody.className="bg-bisque";
     table.appendChild(tableBody);
     const row=document.createElement('tr');
     row.innerHTML = `

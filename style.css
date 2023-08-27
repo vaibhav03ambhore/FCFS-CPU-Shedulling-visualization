@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 10px;
@@ -13,42 +13,27 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  h3{
+    margin-top: -5px;
+  }
+
   h1 ,h3{
     text-align: center;
   }
   
   #input-form {
-    margin-top: 75px;
+    margin-top: 50px;
     width: 100%;
   }
   
-  .utable {
 
-    width: 100%;
-    border-collapse: collapse;
-    background-color: aqua;
-  }
-
-  #input-table{
-    background-color: bisque;
-    width: 100%;
-  }
   #answer-table{
     margin-top: 25px;
     width: auto;
+    background-color: red;
   }
-  .ans-table{
-   width: 100%;
-  }
-  .ans-header-row{
-    background-color: aqua;
-  }
-  .ans-table-body{
-    background-color: bisque;
-  }
-  .ans-table-last-row{
-    background-color: rgb(209, 233, 158);
-  }
+ 
 
   table, th, td {
     width: auto;
@@ -57,39 +42,71 @@ body {
   }
   
   th, td {
-    padding: 8px;
+    padding: 5px;
     text-align: center;
   }
-  
-  button {
-     margin-top: 10px;
-     color: white;
-     background-color: rgb(1, 52, 52);
-     border-radius: 5px;
-     padding: 8px;
-     cursor: pointer;
-  }
 
-  #add-row:hover {
-    background-color: antiquewhite;
-    color: black;
-  }
 
-  #generate-answer:hover{
-    background-color: antiquewhite;
-    color: black;
+  .delete-row{
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
   }
-  
   .delete-row:hover {
-    background-color: rgb(243, 75, 75);
-    color: black;
-  }
+    background-color: rgb(236, 223, 223);
+    color: rgb(222, 15, 15);
+    border: 1px solid red;
+  } 
 
 
+
+
+  /* Shared Button Styles */
+.button {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-primary {
+  color: white;
+  background-color: rgb(1, 52, 52);
+}
+
+.button:hover {
+  background-color: antiquewhite;
+  color: black;
+}
+
+/* Background Colors */
+.bg-aqua {
+  background-color: aqua;
+}
+
+.bg-bisque {
+  background-color: bisque;
+}
+
+.bg-light-green {
+  background-color: rgb(197, 235, 116);
+}
+
+/* Table Styling */
+.ans-table th,
+.ans-table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid black;
+}
 
 
 
  
 
 
- 

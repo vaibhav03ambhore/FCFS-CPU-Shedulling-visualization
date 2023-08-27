@@ -4,40 +4,37 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FCFS Algorithm</title>
 </head>
 <body>
 
     <div class="container">
 
-        <h1>FCFS - First Come First Serve</h1>
-        <h3>( <a href="https://www.geeksforgeeks.org/preemptive-and-non-preemptive-scheduling/" target="_blank">Non-Preemptive</a> Sheduling Algorithm ) </h3>
+        <h1><span class="icon">🔄</span> FCFS - First Come First Serve</h1>
+        <h3>( <a href="https://www.geeksforgeeks.org/preemptive-and-non-preemptive-scheduling/" target="_blank">Non-Preemptive</a> Sheduling Algorithm )</h3>
         <form id="input-form">
-            <table class="utable" >
+            <table class=" bg-aqua">
                 <thead>
                     <tr>
-                    <th>Process</th>
-                    <th>Arrival Time</th>
-                    <th>Burst Time</th>
+                        <th>Process</th>
+                        <th>Arrival Time</th>
+                        <th>Burst Time</th>
                     </tr>
                 </thead>
-                <tbody id="input-table">
+                <tbody id="input-table" class="bg-bisque">
                 </tbody>
             </table>
-            <button type="button" id="add-row">Add Row</button>
+            <button type="button" class="button button-primary" id="add-row">Add Row</button>
             <br>
-            <button type="button" id="generate-answer">Generate Answer</button>
-
-            
-            <div id="answer-table"></div>
+            <button type="button" class="button button-primary" id="generate-answer">Generate Answer</button>
+            <div id="answer-table" class="bg-light-green"></div>
         </form>
 
-        
         <hr>
-        <a style="font-size: 15px;"      href="https://en.wikipedia.org/wiki/Scheduling_(computing)"  target="_blank">Read more about CPU sheduling algorithms</a>
+        <a class="read-more" href="https://en.wikipedia.org/wiki/Scheduling_(computing)" target="_blank">Read more about CPU scheduling algorithms</a>
 
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
