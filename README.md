@@ -9,14 +9,17 @@ This project implements the First-Come-First-Serve (FCFS) scheduling algorithm c
 - Simple web-based interface for easy interaction.
 
 ## Visuals
+-desktop view
+![fcfs](https://github.com/vaibhav03ambhore/FCFS-algorithm-OS/assets/115728010/0565c6db-a113-40dc-8440-6d646790881f)
 
-![Alt Text](Image URL)
+-practical on laptop screen
 
+https://github.com/vaibhav03ambhore/FCFS-algorithm-OS/assets/115728010/57e17e73-513b-4247-8119-5485147d4760
 
-### Prerequisites
+## Prerequisites
 
 - Web browser (Chrome, Firefox, etc.)
-
+  
 ### Installation and Usage
 
 1. Clone this repository:
