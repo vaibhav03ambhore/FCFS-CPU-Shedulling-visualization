@@ -8,6 +8,11 @@ This project implements the First-Come-First-Serve (FCFS) scheduling algorithm c
 - Calculate and display start times, end times, waiting times, and turnaround times.
 - Simple web-based interface for easy interaction.
 
+## Visuals
+
+![Alt Text](Image URL)
+
+
 ### Prerequisites
 
 - Web browser (Chrome, Firefox, etc.)
