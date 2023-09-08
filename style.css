@@ -4,6 +4,25 @@
     padding: 10px;
     font-size: 15px;
   }
+  body {
+    background: linear-gradient(45deg, #E0F3F1, #FCE38A, #F38181, #EAFFD0, #95E1D3);
+    background-size: 400% 400%;
+    animation: gradient-animation 9s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
 
   .container{
     border: 2px solid blueviolet;
