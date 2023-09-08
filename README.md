@@ -14,7 +14,10 @@ This project implements the First-Come-First-Serve (FCFS) scheduling algorithm c
 
 -practical on laptop screen
 
-https://github.com/vaibhav03ambhore/FCFS-algorithm-OS/assets/115728010/57e17e73-513b-4247-8119-5485147d4760
+
+https://github.com/vaibhav03ambhore/FCFS-algorithm-OS/assets/115728010/3360f157-446c-473d-9486-cd458d97fe6d
+
+
 
 ## Prerequisites
 
